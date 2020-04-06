@@ -21,6 +21,21 @@
             this.productRepository = productRepository;
         }
 
+        public async Task ClearCart(string userId)
+        {
+            var products = this.cartRepository
+                .All()
+                .Where(x => x.UserId == userId)
+                .ToList();
+
+            foreach (var product in products)
+            {
+                this.cartRepository.HardDelete(product);
+            }
+
+            await this.cartRepository.SaveChangesAsync();
+        }
+
         public IEnumerable<T> GetProducts<T>(string userId)
         {
             IQueryable<Cart> products = this.cartRepository

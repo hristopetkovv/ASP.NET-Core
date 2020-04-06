@@ -19,6 +19,8 @@
     <Compile Remove="Migrations\20200405082733_..Designer.cs" />
     <Compile Remove="Migrations\20200405083146_addAddressToUser.cs" />
     <Compile Remove="Migrations\20200405083146_addAddressToUser.Designer.cs" />
+    <Compile Remove="Migrations\20200406121413_addColumnToTableOrder.cs" />
+    <Compile Remove="Migrations\20200406121413_addColumnToTableOrder.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

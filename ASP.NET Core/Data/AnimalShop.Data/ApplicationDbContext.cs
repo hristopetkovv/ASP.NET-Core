@@ -30,15 +30,11 @@
 
         public DbSet<Food> Food { get; set; }
 
-        public DbSet<FoodOrder> FoodOrder { get; set; }
-
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<PetAdvice> PetAdvices { get; set; }
 
         public DbSet<Product> Products { get; set; }
-
-        public DbSet<ProductOrder> ProductOrders { get; set; }
 
         public DbSet<ContactForm> ContactsForm { get; set; }
 
@@ -67,12 +63,6 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
-            builder.Entity<ProductOrder>(productOrder =>
-            {
-                productOrder.HasKey(po => new { po.OrderId, po.ProductId });
-            });
-
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
 

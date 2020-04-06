@@ -1,2 +1,34 @@
-﻿<h3>Order page</h3>
+﻿@model AnimalShop.Web.ViewModels.Orders.OrderListingViewModel
 
+<h2>My Orders</h2>
+
+<div class="row">
+    <table>
+        <tr>
+            <th>OrderId</th>
+            <th>FullName</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+            <th>Price</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var order in Model.Orders)
+        {
+            <partial name="../Shared/_OrderPartialView.cshtml" model="order" />
+        }
+    </table>
+</div>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+</style>

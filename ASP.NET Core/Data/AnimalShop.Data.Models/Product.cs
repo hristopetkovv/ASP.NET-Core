@@ -28,8 +28,6 @@ namespace AnimalShop.Data.Models
 
         public Brand Brand { get; set; }
 
-        public virtual ICollection<ProductOrder> Orders { get; set; } = new HashSet<ProductOrder>();
-
         public AnimalType AnimalType { get; set; }
 
         public ProductCategory Category { get; set; }

@@ -44,8 +44,6 @@ namespace AnimalShop.Data.Models
         [Required]
         public string Image { get; set; }
 
-        public virtual ICollection<FoodOrder> Orders { get; set; } = new HashSet<FoodOrder>();
-
         public virtual ICollection<Vote> Votes { get; set; } = new HashSet<Vote>();
     }
 }

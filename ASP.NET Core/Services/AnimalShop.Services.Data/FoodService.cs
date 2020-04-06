@@ -13,13 +13,11 @@
     public class FoodService : IFoodService
     {
         private readonly IDeletableEntityRepository<Food> foodRepository;
-        private readonly IDeletableEntityRepository<FoodOrder> foodOrderRepository;
         private readonly IDeletableEntityRepository<Cart> cartRepository;
 
-        public FoodService(IDeletableEntityRepository<Food> foodRepository, IDeletableEntityRepository<FoodOrder> foodOrderRepository, IDeletableEntityRepository<Cart> cartRepository)
+        public FoodService(IDeletableEntityRepository<Food> foodRepository, IDeletableEntityRepository<Cart> cartRepository)
         {
             this.foodRepository = foodRepository;
-            this.foodOrderRepository = foodOrderRepository;
             this.cartRepository = cartRepository;
         }
 

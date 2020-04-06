@@ -56,9 +56,12 @@
             {
                 <p>
                     @{ var price = Model.SumOfProducts + 5;
-                        var priceToFreeShipping = 45 - Model.SumOfProducts;}
+                        var priceToFreeShipping = 50 - Model.SumOfProducts;}
                     <strong>You need $@priceToFreeShipping more for free shipping.</strong>
-                    <strong>Your total sum is $@price.</strong>
+                   
+                </p>
+                <p>
+                    <strong>Your total sum with shipping is $@price.</strong>
                 </p>
             }
             else

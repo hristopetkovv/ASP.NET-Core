@@ -6,6 +6,7 @@
     using AnimalShop.Data.Models;
     using AnimalShop.Services.Data;
     using AnimalShop.Web.ViewModels;
+    using AnimalShop.Web.ViewModels.Orders;
     using AnimalShop.Web.ViewModels.ProductsInCart;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -45,15 +46,15 @@
         public async Task<ActionResult> MyCart()
         {
             var user = await this.userManager.GetUserAsync(this.User);
+            var productsSum = this.usersService.SumProductsPrice(user.Id);
 
             var viewModel = new ProductCartListingViewModel
             {
-                SumOfProducts = this.usersService.SumProductsPrice(user.Id),
+                SumOfProducts = productsSum,
                 Count = this.usersService.GetProductsCount(user.Id),
                 Products = this.usersService.GetProducts<ProductCartViewModel>(user.Id),
             };
 
-            var orderId = this.ordersService.CreateOrderAsync(user.Id);
 
             return this.View(viewModel);
         }
@@ -67,9 +68,21 @@
         }
 
         [Authorize]
-        public IActionResult CompletedOrder()
+        public async Task<IActionResult> CompletedOrder()
         {
-            return this.View();
+            var user = await this.userManager.GetUserAsync(this.User);
+            var productsSum = this.usersService.SumProductsPrice(user.Id);
+
+            await this.ordersService.CreateOrderAsync(user.Id, productsSum);
+
+            await this.usersService.ClearCart(user.Id);
+
+            var viewModel = new OrderListingViewModel()
+            {
+                Orders = this.ordersService.GetOrders<OrderViewModel>(user.Id),
+            };
+
+            return this.View(viewModel);
         }
     }
 }

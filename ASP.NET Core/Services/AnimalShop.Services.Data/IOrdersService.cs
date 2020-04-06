@@ -1,9 +1,12 @@
 ﻿namespace AnimalShop.Services.Data
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     public interface IOrdersService
     {
-        Task<int> CreateOrderAsync(string userId);
+        Task CreateOrderAsync(string userId, decimal price);
+
+        IEnumerable<T> GetOrders<T>(string userId);
     }
 }

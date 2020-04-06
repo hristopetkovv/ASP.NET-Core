@@ -11,6 +11,8 @@
 
         decimal SumProductsPrice(string userId);
 
+        Task ClearCart(string userId);
+
         Task RemoveProduct(int productId);
     }
 }

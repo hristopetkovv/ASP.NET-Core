@@ -16,8 +16,7 @@ namespace AnimalShop.Data.Models
 
         public ApplicationUser User { get; set; }
 
-        public virtual ICollection<FoodOrder> Food { get; set; } = new HashSet<FoodOrder>();
-
-        public virtual ICollection<ProductOrder> Products { get; set; } = new HashSet<ProductOrder>();
+        [Required]
+        public decimal Price { get; set; }
     }
 }
