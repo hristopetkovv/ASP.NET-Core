@@ -1,0 +1,166 @@
+﻿@using AnimalShop.Common
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
+
+    <environment names="Development">
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+    <environment names="Staging,Production">
+        <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="nav nav-tabs flex-grow-1">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" href="#">
+                                Dogs
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Food">Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="House">Houses</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Toy">Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Bowl">Bowls</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Accessories">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" href="#">
+                                Cats
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Food">Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="House">Houses</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Toy">Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Bowl">Bowls</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Accessories">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" href="#">
+                                Birds
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Food">Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Cage">Cages</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Toy">Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Bottle">Bottles</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Accessories">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" href="#">
+                                Fishes
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Food">Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Aquarium">Aquariums</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Accessories">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" href="#">
+                                SmallPets
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header font-weight-bold">Hamsters</li>
+                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Food">Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Toy">Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Cage">Cages</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header font-weight-bold">Chinchillas</li>
+                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="Food">Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="Toy">Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="House">Houses</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header font-weight-bold">Rabbits</li>
+                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Food">Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Toy">Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="House">Houses</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Bottle">Bottles</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" href="#">
+                                PetAdvices
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Dog">Dogs</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Cat">Cats</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Bird">Birds</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Fish">Fishes</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="SmallPet">SmallPets</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Contacts" asp-action="Index">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Home/MyCart"><img src="https://media.gettyimages.com/vectors/shopping-cart-vector-vector-id477708382" align="right" alt="Shopping Cart " border="0" width="65" height="40" style="padding: 6px 0px 0px 0px" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @this.RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; @DateTime.Now - <a asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a> - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> -
+            <a asp-area="" asp-controller="Contacts" asp-action="Index">Contact us</a>
+            <button style="border-radius: 50%; float: right; margin-top: 5px;" class="btn btn-outline-dark btn-xs" onclick="topFunction()" id="myBtn">Top</button>
+        </div>
+    </footer>
+
+    <link href="~/lib/fontawesome/css/all.css" rel="stylesheet" asp-append-version="true" />
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+    <script>
+        function topFunction() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    @this.RenderSection("Scripts", required: false)
+</body>
+</html>

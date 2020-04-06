@@ -1,0 +1,13 @@
+﻿@model AnimalShop.Web.ViewModels.PetAdvices.PetAdviceViewModel
+
+<li>
+        <a href="@Model.Url" class="listingBlock theme-brand1">
+            <div class="listingBlockWrap">
+                <img style="margin-right: 10px" class="rounded" align="left" alt="dog eating" src="@Model.Image" height="80" width="80" />
+                <h3>@Model.Title</h3>
+                <p class="text-dark">
+                    @Model.Description
+                </p>
+            </div>
+        </a>
+    </li>

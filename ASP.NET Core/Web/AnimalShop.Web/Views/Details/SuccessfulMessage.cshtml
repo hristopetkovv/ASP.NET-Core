@@ -1,0 +1,11 @@
+﻿@{
+    this.ViewData["Title"] = "AddProduct";
+}
+<h4>You successful add product to your cart.</h4>
+<h4>You will be redirected to your cart.</h4>
+<script type="text/javascript">
+    function Redirect() {
+        window.location = "https://localhost:44319/Home/MyCart";
+    }
+    setTimeout('Redirect()', 6000);
+</script>

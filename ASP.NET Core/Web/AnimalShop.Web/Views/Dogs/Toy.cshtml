@@ -1,0 +1,18 @@
+﻿@model AnimalShop.Web.ViewModels.Products.ProductListingViewModel
+
+@{
+    this.ViewData["Title"] = "Dogs Toys";
+}
+
+<div>
+    <p>
+        <strong>@Model.Count product(s) found</strong>
+    </p>
+</div>
+
+<div class="row">
+    @foreach (var toy in Model.Products)
+    {
+        <partial name="../Shared/_ProductPartialView.cshtml" model="toy" />
+    }
+</div>
