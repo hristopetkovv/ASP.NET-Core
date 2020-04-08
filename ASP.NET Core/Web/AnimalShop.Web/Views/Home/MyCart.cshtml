@@ -52,7 +52,7 @@
                     <label for="fname">Cash on Delivery</label>
                 </div>
             </div>
-            @if (Model.SumOfProducts < 50)
+            @if (Model.SumOfProducts < 50 && Model.SumOfProducts > 0)
             {
                 <p>
                     @{ var price = Model.SumOfProducts + 5;

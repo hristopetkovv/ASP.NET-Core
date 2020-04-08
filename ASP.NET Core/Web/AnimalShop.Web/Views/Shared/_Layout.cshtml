@@ -17,9 +17,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
+                <a class="navbar-left" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/logo.jpg" width="90" height="50" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -33,11 +33,11 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Food">Food</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="House">Houses</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Toy">Toys</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Bowl">Bowls</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Accessories">Accessories</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Food"><i class="fa fa-bone" style="margin-right: 4px"></i>Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="House"><i class="fa fa-house-damage" style="margin-right: 4px"></i>Houses</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Toy"><i class="fa fa-basketball-ball" style="margin-right: 4px"></i>Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Bowl"><i class="fa fa-ring" style="margin-right: 4px"></i>Bowls</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Dogs" asp-action="Accessories"><i class="fa fa-cog" style="margin-right: 4px"></i>Accessories</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -46,11 +46,11 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Food">Food</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="House">Houses</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Toy">Toys</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Bowl">Bowls</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Accessories">Accessories</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Food"><i class="fa fa-fish" style="margin-right: 4px"></i>Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="House"><i class="fa fa-house-damage" style="margin-right: 4px"></i>Houses</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Toy"><i class="fa fa-basketball-ball" style="margin-right: 4px"></i>Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Bowl"><i class="fa fa-ring" style="margin-right: 4px"></i>Bowls</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Cats" asp-action="Accessories"><i class="fa fa-cog" style="margin-right: 4px"></i>Accessories</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -59,11 +59,11 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Food">Food</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Cage">Cages</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Toy">Toys</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Bottle">Bottles</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Accessories">Accessories</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Food"><i class="fa fa-cookie" style="margin-right: 4px"></i>Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Cage"><i class="fa fa-home" style="margin-right: 4px"></i>Cages</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Toy"><i class="fa fa-basketball-ball" style="margin-right: 4px"></i>Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Bottle"><i class="fa fa-bong" style="margin-right: 4px"></i>Bottles</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Birds" asp-action="Accessories"><i class="fa fa-cog" style="margin-right: 4px"></i>Accessories</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -72,9 +72,9 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Food">Food</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Aquarium">Aquariums</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Accessories">Accessories</a></li>
+                                <li><<a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Food"><i class="fa fa-cookie" style="margin-right: 4px"></i>Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Aquarium"><i class="fa fa-fish" style="margin-right: 4px"></i>Aquariums</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Fishes" asp-action="Accessories"><i class="fa fa-cog" style="margin-right: 4px"></i>Accessories</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -84,20 +84,20 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-header font-weight-bold">Hamsters</li>
-                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Food">Food</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Toy">Toys</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Cage">Cages</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Food"><i class="fa fa-drumstick-bite" style="margin-right: 4px"></i>Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Toy"><i class="fa fa-basketball-ball" style="margin-right: 4px"></i>Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Hamsters" asp-action="Cage"><i class="fa fa-home" style="margin-right: 4px"></i>Cages</a></li>
                                 <li class="divider"></li>
                                 <li class="dropdown-header font-weight-bold">Chinchillas</li>
-                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="Food">Food</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="Toy">Toys</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="House">Houses</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="Food"><i class="fa fa-drumstick-bite" style="margin-right: 4px"></i>Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="Toy"><i class="fa fa-basketball-ball" style="margin-right: 4px"></i>Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Chinchillas" asp-action="House"><i class="fa fa-house-damage" style="margin-right: 4px"></i>Houses</a></li>
                                 <li class="divider"></li>
                                 <li class="dropdown-header font-weight-bold">Rabbits</li>
-                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Food">Food</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Toy">Toys</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="House">Houses</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Bottle">Bottles</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Food"><i class="fa fa-carrot" style="margin-right: 4px"></i>Food</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Toy"><i class="fa fa-basketball-ball" style="margin-right: 4px"></i>Toys</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="House"><i class="fa fa-house-damage" style="margin-right: 4px"></i>Houses</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="Rabbits" asp-action="Bottle"><i class="fa fa-bong" style="margin-right: 4px"></i>Bottles</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -106,24 +106,25 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Dog">Dogs</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Cat">Cats</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Bird">Birds</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Fish">Fishes</a></li>
-                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="SmallPet">SmallPets</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Dog"><i class="fa fa-dog" style="margin-right: 4px"></i>Dogs</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Cat"><i class="fa fa-cat" style="margin-right: 4px"></i>Cats</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Bird"><i class="fa fa-dove" style="margin-right: 4px"></i>Birds</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="Fish"><i class="fa fa-fish" style="margin-right: 4px"></i>Fishes</a></li>
+                                <li><a class="list-group-item text-dark" asp-controller="PetAdvices" asp-action="SmallPet"><i class="fa fa-otter" style="margin-right: 4px"></i>SmallPets</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contacts" asp-action="Index">Contacts</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/Home/MyCart"><img src="https://media.gettyimages.com/vectors/shopping-cart-vector-vector-id477708382" align="right" alt="Shopping Cart " border="0" width="65" height="40" style="padding: 6px 0px 0px 0px" /></a>
+                        <li class="nav-item text-center" style="margin-top: 10px; margin-left: 45px">
+                            <a class="text-dark" href="/Home/MyCart"><span style="font-size: 1em" class="text-dark text-right"><i class="fa fa-cart-plus fa-lg"></i></span>     My Cart</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
 
     <div class="container">
         <partial name="_CookieConsentPartial" />
@@ -136,7 +137,7 @@
         <div class="container">
             <i class="fa fa-calendar-day" style="margin-right: 10px"></i>@DateTime.Now - <a asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a> - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> -
             <a asp-area="" asp-controller="Contacts" asp-action="Index">Contact us</a>
-            <button style="border-radius: 50%; float: right; margin-top: 5px;" class="btn btn-outline-dark btn-xs" onclick="topFunction()" id="myBtn"><i class="fa fa-arrow-up"></i></button>
+            <button style="border-radius: 50%; float: right; margin-top: 10px" class="btn btn-outline-dark btn-xs" onclick="topFunction()" id="myBtn"><i class="fa fa-arrow-up"></i></button>
         </div>
     </footer>
 
@@ -164,3 +165,4 @@
     @this.RenderSection("Scripts", required: false)
 </body>
 </html>
+>
