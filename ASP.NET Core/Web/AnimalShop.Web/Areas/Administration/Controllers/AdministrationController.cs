@@ -35,7 +35,7 @@
 
             await this.usersService.CreateFoodAsync(input);
 
-            return this.RedirectToAction("Index", "Home");
+            return this.RedirectToAction("CreateFood");
         }
 
         public IActionResult CreateProduct()
@@ -53,7 +53,7 @@
 
             await this.usersService.CreateProductAsync(input);
 
-            return this.RedirectToAction("Index", "Home");
+            return this.RedirectToAction("CreateProduct");
         }
     }
 }
