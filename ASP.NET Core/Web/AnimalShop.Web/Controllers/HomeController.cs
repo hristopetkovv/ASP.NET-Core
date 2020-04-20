@@ -55,14 +55,13 @@
                 Products = this.usersService.GetProducts<ProductCartViewModel>(user.Id),
             };
 
-
             return this.View(viewModel);
         }
 
         [Authorize]
         public async Task<IActionResult> RemoveProduct(int productId)
         {
-            await this.usersService.RemoveProduct(productId);
+            await this.usersService.RemoveProductAsync(productId);
 
             return this.RedirectToAction("MyCart");
         }
@@ -75,7 +74,7 @@
 
             await this.ordersService.CreateOrderAsync(user.Id, productsSum);
 
-            await this.usersService.ClearCart(user.Id);
+            await this.usersService.ClearCartAsync(user.Id);
 
             var viewModel = new OrderListingViewModel()
             {

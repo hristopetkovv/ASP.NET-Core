@@ -7,6 +7,7 @@
     using AnimalShop.Data.Common.Repositories;
     using AnimalShop.Data.Models;
     using AnimalShop.Services.Mapping;
+    using AnimalShop.Web.ViewModels.Administration.Administration;
 
     public class UsersService : IUsersService
     {
@@ -21,7 +22,7 @@
             this.productRepository = productRepository;
         }
 
-        public async Task ClearCart(string userId)
+        public async Task ClearCartAsync(string userId)
         {
             var products = this.cartRepository
                 .All()
@@ -34,6 +35,43 @@
             }
 
             await this.cartRepository.SaveChangesAsync();
+        }
+
+        public async Task CreateFoodAsync(FoodInputViewModel model)
+        {
+            var food = new Food
+            {
+                Name = model.Name,
+                Weight = model.Weight,
+                Price = model.Price,
+                ExpirationDate = model.ExpirationDate,
+                BrandId = model.BrandId,
+                Stock = model.Stock,
+                AnimalType = model.AnimalType,
+                Description = model.Description,
+                Image = model.Image,
+            };
+
+            await this.foodRepository.AddAsync(food);
+            await this.foodRepository.SaveChangesAsync();
+        }
+
+        public async Task CreateProductAsync(ProductInputViewModel model)
+        {
+            var product = new Product
+            {
+                Name = model.Name,
+                Description = model.Description,
+                Price = model.Price,
+                BrandId = model.BrandId,
+                AnimalType = model.AnimalType,
+                Category = model.Category,
+                Stock = model.Stock,
+                Image = model.Image,
+            };
+
+            await this.productRepository.AddAsync(product);
+            await this.productRepository.SaveChangesAsync();
         }
 
         public IEnumerable<T> GetProducts<T>(string userId)
@@ -55,7 +93,7 @@
             return count;
         }
 
-        public async Task RemoveProduct(int productId)
+        public async Task RemoveProductAsync(int productId)
         {
             var productToRemove = this.cartRepository
                 .All()

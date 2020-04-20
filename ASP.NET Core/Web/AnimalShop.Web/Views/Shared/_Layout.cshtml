@@ -118,8 +118,15 @@
                         </li>
                         @if (this.User.IsInRole("Administrator"))
                         {
-                            <li class="nav-item text-center" style="margin-top: 10px; margin-left: 45px">
-                                <a class="text-dark" href="/Home"><span style="font-size: 1em" class="text-dark text-right"><i class="fa fa-cart-plus fa-lg"></i></span>     My Cart</a>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" href="#">
+                                    Create
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="list-group-item text-dark" asp-area="Administration" asp-controller="Administration" asp-action="CreateFood">Food</a></li>
+                                    <li><a class="list-group-item text-dark" asp-area="Administration" asp-controller="Administration" asp-action="CreateProduct">Product</a></li>
+                                </ul>
                             </li>
                         }
                         else
