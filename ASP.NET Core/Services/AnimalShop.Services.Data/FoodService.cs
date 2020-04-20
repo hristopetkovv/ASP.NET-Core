@@ -55,9 +55,18 @@
             return food;
         }
 
-        public IEnumerable<T> GetFood<T>(AnimalType animalType)
+        public IEnumerable<T> GetFood<T>(AnimalType animalType, int? take = null, int skip = 0)
         {
-            IQueryable<Food> food = this.foodRepository.All().Where(x => x.AnimalType == animalType);
+            IQueryable<Food> food = this.foodRepository
+                .All()
+                .OrderByDescending(x => x.CreatedOn)
+                .Where(x => x.AnimalType == animalType)
+                .Skip(skip);
+
+            if (take.HasValue)
+            {
+                food = food.Take(take.Value);
+            }
 
             return food.To<T>().ToList();
         }

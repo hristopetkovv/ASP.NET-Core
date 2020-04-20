@@ -6,6 +6,10 @@
     {
         public int Count { get; set; }
 
+        public int CurrentPage { get; set; }
+
+        public int PagesCount { get; set; }
+
         public IEnumerable<ProductViewModel> Products { get; set; }
     }
 }

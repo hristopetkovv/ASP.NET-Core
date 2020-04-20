@@ -7,7 +7,7 @@
 
     public interface IFoodService
     {
-        IEnumerable<T> GetFood<T>(AnimalType animalType);
+        IEnumerable<T> GetFood<T>(AnimalType animalType, int? take = null, int skip = 0);
 
         int GetFoodCount(AnimalType animalType);
 

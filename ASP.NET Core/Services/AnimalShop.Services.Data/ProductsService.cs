@@ -31,11 +31,18 @@
             return count;
         }
 
-        public IEnumerable<T> GetProducts<T>(AnimalType animalType, ProductCategory product)
+        public IEnumerable<T> GetProducts<T>(AnimalType animalType, ProductCategory product, int? take = null, int skip = 0)
         {
             IQueryable<Product> toys = this.productRepository
                 .All()
-                .Where(x => x.AnimalType == animalType && x.Category == product);
+                .OrderByDescending(x => x.CreatedOn)
+                .Where(x => x.AnimalType == animalType && x.Category == product)
+                .Skip(skip);
+
+            if (take.HasValue)
+            {
+                toys = toys.Take(take.Value);
+            }
 
             return toys.To<T>().ToList();
         }

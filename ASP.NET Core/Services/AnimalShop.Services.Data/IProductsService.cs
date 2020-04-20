@@ -7,7 +7,7 @@
 
     public interface IProductsService
     {
-        IEnumerable<T> GetProducts<T>(AnimalType animalType, ProductCategory product);
+        IEnumerable<T> GetProducts<T>(AnimalType animalType, ProductCategory product, int? take = null, int skip = 0);
 
         int GetProductsCount(AnimalType animalType, ProductCategory product);
 
