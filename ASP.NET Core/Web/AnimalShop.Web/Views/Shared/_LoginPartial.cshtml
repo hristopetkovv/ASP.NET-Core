@@ -10,12 +10,6 @@
         <li class="nav-item" style="margin-top: 5px; margin-right: 2px">
             <a class="nav-link text-dark btn-group-toggle btn-link btn-outline-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @(this.User.Identity.Name)!</a>
         </li>
-        if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-        {
-            <li class="nav-item">
-                <a class="nav-link  text-dark" asp-area="Administration" asp-controller="Dashboard" asp-action="Index" title="Admin">Admin</a>
-            </li>
-        }
         <li class="nav-item" style="margin-top: 5px">
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@(this.Url.Action("Login", "Account", new { area = "Identity" }))">
                 <button type="submit" class="nav-link btn btn-link btn-outline-secondary text-dark">Logout</button>

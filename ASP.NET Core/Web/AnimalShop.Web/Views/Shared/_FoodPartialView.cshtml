@@ -4,7 +4,7 @@
     <a asp-controller="Details" asp-action="Food" asp-route-id="@Model.Id">
         <img src="@Model.Image" width="100" class="mr-3" />
         <div class="media-body">
-            <h4>@Model.Name</h4>
+            <h5>@Model.Name</h5>
             <p class="text-dark">
                 @{ var weight = Model.Weight + "kg";}
                 @weight for <strong>$@Model.Price</strong>

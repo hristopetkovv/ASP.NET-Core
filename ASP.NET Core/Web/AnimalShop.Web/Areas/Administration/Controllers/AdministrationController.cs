@@ -10,5 +10,10 @@
     [Area("Administration")]
     public class AdministrationController : BaseController
     {
+
+        public IActionResult CreateFood()
+        {
+            return this.View();
+        }
     }
 }

@@ -116,9 +116,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contacts" asp-action="Index">Contacts</a>
                         </li>
-                        <li class="nav-item text-center" style="margin-top: 10px; margin-left: 45px">
-                            <a class="text-dark" href="/Home/MyCart"><span style="font-size: 1em" class="text-dark text-right"><i class="fa fa-cart-plus fa-lg"></i></span>     My Cart</a>
-                        </li>
+                        @if (this.User.IsInRole("Administrator"))
+                        {
+                            <li class="nav-item text-center" style="margin-top: 10px; margin-left: 45px">
+                                <a class="text-dark" href="/Home"><span style="font-size: 1em" class="text-dark text-right"><i class="fa fa-cart-plus fa-lg"></i></span>     My Cart</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item text-center" style="margin-top: 10px; margin-left: 45px">
+                                <a class="text-dark" href="/Home/MyCart"><span style="font-size: 1em" class="text-dark text-right"><i class="fa fa-cart-plus fa-lg"></i></span>     My Cart</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
