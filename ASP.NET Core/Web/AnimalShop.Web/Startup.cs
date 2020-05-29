@@ -1,8 +1,7 @@
 ﻿namespace AnimalShop.Web
 {
-    using System;
     using System.Reflection;
-    using System.Threading.Tasks;
+
     using AnimalShop.Data;
     using AnimalShop.Data.Common;
     using AnimalShop.Data.Common.Repositories;
@@ -13,11 +12,9 @@
     using AnimalShop.Services.Mapping;
     using AnimalShop.Services.Messaging;
     using AnimalShop.Web.ViewModels;
-
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
