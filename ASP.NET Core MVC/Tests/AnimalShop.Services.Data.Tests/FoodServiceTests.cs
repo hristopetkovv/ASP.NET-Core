@@ -74,7 +74,7 @@
 
             var service = new FoodService(foodRepository, cartRepository);
 
-            var expFood = service.GetById<FoodViewModel>(0);
+            var expFood = service.GetById<FoodViewModel>(1);
 
             Assert.True(expFood.Name == "test1");
         }
