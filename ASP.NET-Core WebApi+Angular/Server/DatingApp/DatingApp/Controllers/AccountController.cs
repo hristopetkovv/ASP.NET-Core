@@ -2,6 +2,7 @@
 using DatingApp.DTOs;
 using DatingApp.Entities;
 using DatingApp.Interfaces;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
