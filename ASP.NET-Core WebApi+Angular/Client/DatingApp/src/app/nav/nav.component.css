@@ -8,3 +8,7 @@
 .navbar-dark .navbar-brand {
     color: #fff;
 }
+
+.dropdown-toggle, .dropdown-item {
+    cursor: pointer;
+}
