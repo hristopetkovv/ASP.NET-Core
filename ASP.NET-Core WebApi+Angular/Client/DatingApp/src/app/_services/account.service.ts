@@ -14,7 +14,11 @@ export class AccountService {
   constructor(private http: HttpClient) { }
 
   login(model: any): Observable<User> {
-    return this.http.post<User>(this.baseUrl + 'Account/login', model)
+    return this.http.post<User>(this.baseUrl + 'Account/login', model);
+  }
+
+  register(model: any): Observable<User> {
+    return this.http.post<User>(this.baseUrl + 'Account/register', model);
   }
 
   setCurrentUser(user: User) {
