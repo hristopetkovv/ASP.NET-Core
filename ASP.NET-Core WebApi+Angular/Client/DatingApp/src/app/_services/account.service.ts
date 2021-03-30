@@ -15,7 +15,7 @@ export class AccountService {
   constructor(private http: HttpClient) { }
 
   login(model: any): Observable<User> {
-    return this.http.post<User>(this.baseUrl + 'Account/login', model);
+    return this.http.post<User>('Account/login', model);
   }
 
   register(model: any): Observable<User> {

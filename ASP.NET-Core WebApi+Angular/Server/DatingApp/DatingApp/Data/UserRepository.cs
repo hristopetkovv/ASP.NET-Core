@@ -64,7 +64,7 @@ namespace DatingApp.Data
 		{
 			return await this.context
 				.Users
-				.Where(x => x.UserName == username)
+				.Where(x => x.UserName.ToLower() == username.ToLower())
 				.ProjectTo<MemberDto>(this.mapper.ConfigurationProvider)
 				.SingleOrDefaultAsync();
 		}
