@@ -33,7 +33,7 @@ namespace DatingApp.Controllers
 
             using var hmac = new HMACSHA512();
 
-            var user = new AppUser
+            var user = new User 
             { 
                 UserName = registerDto.Username.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),

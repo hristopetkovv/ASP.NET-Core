@@ -22,7 +22,7 @@ namespace DatingApp.Controllers
         }
 
         [HttpGet("not-found")]
-        public ActionResult<AppUser> GetNotFound()
+        public ActionResult<User> GetNotFound()
         {
             var thing = this.context.Users.Find(-1);
 
