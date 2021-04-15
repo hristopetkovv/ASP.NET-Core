@@ -27,6 +27,14 @@ export class MembersService {
     )
   }
 
+  addLike(username: string) {
+    return this.http.post(this.baseUrl + 'likes/' + username, {});
+  }
+
+  getLikes(predicate: string): Observable<Partial<Member[]>> {
+    return this.http.get<Partial<Member[]>>(this.baseUrl + 'likes?predicate=' + predicate);
+  }
+
   getMember(username: string | null): Observable<Member> {
     const member = this.members.find(x => x.userName === username);
     if (member !== undefined) {

@@ -2,7 +2,7 @@
 
 namespace DatingApp.Migrations
 {
-    public partial class InitCreate : Migration
+    public partial class Create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
