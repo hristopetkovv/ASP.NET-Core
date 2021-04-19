@@ -34,7 +34,7 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(
-                options => options.UseSqlServer(
+                options => options.UseNpgsql(
                     this.configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(typeof(Startup).Assembly.FullName)));
 
