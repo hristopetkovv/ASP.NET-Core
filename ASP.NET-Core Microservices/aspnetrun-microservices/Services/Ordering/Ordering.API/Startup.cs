@@ -38,6 +38,9 @@ namespace Ordering.API
                 });
             });
 
+            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<BasketCheckoutConsumer>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

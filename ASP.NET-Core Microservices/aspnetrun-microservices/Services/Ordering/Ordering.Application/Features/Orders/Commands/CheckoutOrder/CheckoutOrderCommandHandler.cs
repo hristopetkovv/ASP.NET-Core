@@ -11,18 +11,18 @@ using System.Threading.Tasks;
 
 namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
 {
-    public class CheckoutCommandHandler : IRequestHandler<CheckoutOrderCommand, int>
+    public class CheckoutOrderCommandHandler : IRequestHandler<CheckoutOrderCommand, int>
     {
         private readonly IOrderRepository orderRepository;
         private readonly IMapper mapper;
         private readonly IEmailService emailService;
-        private readonly ILogger<CheckoutCommandHandler> logger;
+        private readonly ILogger<CheckoutOrderCommandHandler> logger;
 
-        public CheckoutCommandHandler(
+        public CheckoutOrderCommandHandler(
             IOrderRepository orderRepository, 
             IMapper mapper, 
             IEmailService emailService,
-            ILogger<CheckoutCommandHandler> logger)
+            ILogger<CheckoutOrderCommandHandler> logger)
         {
             this.orderRepository = orderRepository ?? throw new ArgumentNullException(nameof(orderRepository));
             this.mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
